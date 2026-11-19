@@ -1,4 +1,44 @@
+## FADAS methodology
 
+### Training stage
+
+FADAS is trained on intact forest Sentinel-1 SAR imagery to learn the normal
+backscatter patterns of forest areas. The autoencoder reconstructs the input
+SAR observations, and the reconstruction error between the original and
+reconstructed images is minimized during training.
+
+<p align="center">
+  <img src="M2D2.png" alt="FADAS training pipeline" width="1000">
+</p>
+
+<p align="center">
+  <em>
+  Training workflow of FADAS (Forest Anomaly Detection with Autoencoders for
+  SAR Imagery). The autoencoder learns to reconstruct intact forest SAR
+  observations by minimizing the reconstruction error.
+  </em>
+</p>
+
+
+### Deforestation detection
+
+At inference time, the trained reconstruction model is applied to Sentinel-1
+observations acquired over the same area at two different dates. Reconstruction
+errors are used as anomaly heat maps. A Gaussian Mixture Model (GMM) separates
+normal and anomalous responses, and the resulting anomaly masks are compared
+between the two dates to identify newly appearing forest disturbances.
+
+<p align="center">
+  <img src="M2D2-inference.jpg" alt="FADAS deforestation detection pipeline" width="1200">
+</p>
+
+<p align="center">
+  <em>
+  FADAS inference workflow. Reconstruction errors are converted into anomaly
+  masks using a Gaussian Mixture Model, and changes between two acquisition
+  dates are used to derive the predicted deforestation map.
+  </em>
+</p>
 ## Dataset
 
 The Sentinel-1 dataset used in this work is available in the repository maintained by Yifan Zhang:
