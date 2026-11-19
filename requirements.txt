@@ -1,0 +1,15 @@
+numpy
+pandas
+matplotlib
+torch
+torchvision
+tifffile
+rasterio
+geopandas
+shapely
+scipy
+scikit-learn
+segmentation-models-pytorch
+timm
+transformers
+pyproj
