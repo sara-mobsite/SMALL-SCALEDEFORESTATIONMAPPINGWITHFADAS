@@ -13,9 +13,7 @@ reconstructed images is minimized during training.
 
 <p align="center">
   <em>
-  Training workflow of FADAS (Forest Anomaly Detection with Autoencoders for
-  SAR Imagery). The autoencoder learns to reconstruct intact forest SAR
-  observations by minimizing the reconstruction error.
+
   </em>
 </p>
 
@@ -34,9 +32,7 @@ between the two dates to identify newly appearing forest disturbances.
 
 <p align="center">
   <em>
-  FADAS inference workflow. Reconstruction errors are converted into anomaly
-  masks using a Gaussian Mixture Model, and changes between two acquisition
-  dates are used to derive the predicted deforestation map.
+
   </em>
 </p>
 ## Dataset
