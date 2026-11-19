@@ -35,6 +35,8 @@ between the two dates to identify newly appearing forest disturbances.
 
   </em>
 </p>
+
+
 ## Dataset
 
 The Sentinel-1 dataset used in this work is available in the repository maintained by Yifan Zhang:
